@@ -2,53 +2,33 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-linear-to-b from-white to-gray-50 border-t border-gray-100 mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-bold bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-4">
+    <footer className="bg-white dark:bg-gray-900 mt-12 py-8 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="mb-4">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-[#49b1f5] to-[#00c4b6] bg-clip-text text-transparent inline-block">
               Sam's Blog
             </h3>
-            <p className="text-gray-600 text-sm">
-              记录生活，分享思考，探索世界
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+              记录生活 · 分享思考 · 探索世界
             </p>
           </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">快速链接</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  文章列表
-                </a>
-              </li>
-              <li>
-                <a href="/timeline" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  时光记录
-                </a>
-              </li>
-              <li>
-                <a href="/gallery" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  照片墙
-                </a>
-              </li>
-            </ul>
+          
+          <div className="flex justify-center space-x-6 mb-6">
+            <a href="/blog" className="text-gray-500 hover:text-[#49b1f5] transition-colors text-sm">文章</a>
+            <a href="/timeline" className="text-gray-500 hover:text-[#49b1f5] transition-colors text-sm">时光</a>
+            <a href="/gallery" className="text-gray-500 hover:text-[#49b1f5] transition-colors text-sm">照片</a>
+            <a href="/guestbook" className="text-gray-500 hover:text-[#49b1f5] transition-colors text-sm">留言</a>
           </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">联系我</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/guestbook" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  留言板
-                </a>
-              </li>
-            </ul>
+
+          <div className="text-sm text-gray-400 dark:text-gray-500">
+            <p>© {currentYear} Sam. All rights reserved.</p>
+            <p className="mt-1">
+              Powered by <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#49b1f5] transition-colors">Next.js</a>
+            </p>
           </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
-          <p>© {currentYear} Sam's Blog. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 }
-
